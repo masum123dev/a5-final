@@ -6,8 +6,46 @@
     <title>Assignment Five</title>
   </head>
   <body>
-    <h1>This is assignment 5</h1>
+    <header>
+      <div
+        id="header-one-two"
+        class="grid grid-cols-1 lg:flex items-center justify-between px-10 min-h-50 bg-white"
+      >
+        <div class="flex items-center gap-3">
+          <img src="./asset/logo.png" alt="" class="h-15 w-15" />
+          <h2 class="font-bold text-green-800 bg-[0f6422]">
+            Emergency <br />
+            Service
+          </h2>
+        </div>
+        <div class="flex justify-between items-center gap-x-10 sm: grid-cols-1">
+          <div class="flex items-center">
+            <span class="text-3xl">0</span>
+            <img src="./asset/heart.png" alt="" class="h-10 w-10" />
+          </div>
+          <div class="flex items-center">
+            <span id="coin-balance" class="text-3xl">100</span>
+            <img src="./asset/coin.png" alt="" class="h-10 w-10" />
+          </div>
+          <button id="copycounter" class="btn bg-[#19b83b] rounded-3xl">
+            <span>2</span>Copy
+          </button>
+        </div>
+      </div>
 
+      <div
+        class="bg-gradient-to-r from-green-500 via-white-100 to-green-500 flex flex-col justify-center items-center"
+      >
+        <img src="./asset/logo-dark.png" alt="" class="h-25 w-25" />
+        <h1 class="font-bold text-4xl text-white">
+          Emergency Service Directory
+        </h1>
+        <h4 class="text-white pb-5">
+          Government Emergency Services at Your Fingertip – A Project by
+          Government of the People’s Republic of Bangladesh
+        </h4>
+      </div>
+    </header>
     <script type="module" src="./a5final.js"></script>
   </body>
 </html>

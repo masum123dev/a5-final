@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>ASSIGNMENT 05</title>
+  </head>
+  <body>
+    <header>
+      <div
+        id="header-one-two"
+        class="grid grid-cols-1 lg:flex items-center justify-between px-10 min-h-50 bg-white"
+      >
+        <div class="flex items-center gap-3">
+          <img src="./asset/logo.png" alt="" class="h-15 w-15" />
+          <h2 class="font-bold text-green-800 bg-[0f6422]">
+            Emergency <br />
+            Service
+          </h2>
+        </div>
+        <div class="flex justify-between items-center gap-x-10 sm: grid-cols-1">
+          <div class="flex items-center">
+            <span class="text-3xl">0</span>
+            <img src="./asset/heart.png" alt="" class="h-10 w-10" />
+          </div>
+          <div class="flex items-center">
+            <span id="coin-balance" class="text-3xl">100</span>
+            <img src="./asset/coin.png" alt="" class="h-10 w-10" />
+          </div>
+          <button id="copycounter" class="btn bg-[#19b83b] rounded-3xl">
+            <span>2</span>Copy
+          </button>
+        </div>
+      </div>
+
+      <div
+        class="bg-gradient-to-r from-green-500 via-white-100 to-green-500 flex flex-col justify-center items-center"
+      >
+        <img src="./asset/logo-dark.png" alt="" class="h-25 w-25" />
+        <h1 class="font-bold text-4xl text-white">
+          Emergency Service Directory
+        </h1>
+        <h4 class="text-white pb-5">
+          Government Emergency Services at Your Fingertip – A Project by
+          Government of the People’s Republic of Bangladesh
+        </h4>
+      </div>
+    </header>
+    <main class="bg-gray-100 p-4">
+      <!-- Main Container -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        <!-- left Section/Section 01 -->
+        <div
+          id="product-box"
+          class="lg:col-span-9 grid grid-col-1 lg:grid-cols-3 bg-white gap-5"
+        >
+          <!-------------Card 01--------------->
+          <div class="bg-pink-50 p-4 rounded-xl flex flex-col full">
+            <div class="flex justify-between items-center">
+              <img class="h-10 w-10" src="./asset/emergency.png" alt="" />
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div>
+              <h1 class="font-bold text-2xl">National Emergency Number</h1>
+              <h5>National Emergency</h5>
+              <p class="hotline-btn font-bold text-xl">999</p>
+              <button class="bg-gray-200 text-black -my-10">all</button>
+            </div>
+            <div class="mt-4 flex justify-between items-center">
+              <button
+                id="copy-count"
+                class="copy-btn bg-gray-300 rounded-xl w-25 data-service="Emergency" data-number="999""
+              >
+                Copy
+              </button>
+              <button
+                onclick="makeCall('National Emergency Service', '999')"
+                id="btn-one"
+                class="bg-blue-500 rounded-xl w-25 cart-btn"
+              >
+                Call
+              </button>
+            </div>
+          </div>
+          <!-------------Card 02--------------->
+          <div class="bg-pink-50 p-4 rounded-xl flex flex-col fu">
+            <div class="flex justify-between items-center">
+              <img class="h-10 w-10" src="./asset/police.png" alt="" />
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div>
+              <h1 class="font-bold text-2xl">Police Helpline Number</h1>
+              <h5>Police</h5>
+              <p class="font-bold text-xl">999</p>
+              <button class="bg-gray-200 text-black -my-10">Police</button>
+            </div>
+            <div class="mt-4 flex justify-between items-center">
+              <button
+                id="copy-count"
+                class="copy-btn bg-gray-300 rounded-xl  w-25 data-service="Police" data-number="999" "
+              >
+                Copy
+              </button>
+              <button
+                onclick="makeCall('Police', '999')"
+                id="btn-one"
+                class="bg-blue-500 rounded-xl w-25 cart-btn"
+              >
+                Call
+              </button>
+            </div>
+          </div>
+          <!-------------Card 03--------------->
+          <div class="bg-pink-50 p-4 rounded-xl flex flex-col fu">
+            <div class="flex justify-between items-center">
+              <img class="h-10 w-10" src="./asset/fire-service.png" alt="" />
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div>
+              <h1 class="font-bold text-2xl">Fire Service Number</h1>
+              <h5>Fire Service</h5>
+              <p class="font-bold text-xl">999</p>
+              <button class="bg-gray-200 text-black -my-10">Fire</button>
+            </div>
+            <div class="mt-4 flex justify-between items-center">
+              <button
+                id="copy-count"
+                class="copy-btn bg-gray-300 rounded-xl w-25 data-service="Fire" data-number="999" "
+              >
+                Copy
+              </button>
+              <button
+                onclick="makeCall('Fire Service', '999')"
+                id="btn-one"
+                class="bg-blue-500 rounded-xl w-25 cart-btn"
+              >
+                Call
+              </button>
+            </div>
+          </div>
+          <!-------------Card 04--------------->
+          <div class="bg-pink-50 p-4 rounded-xl flex flex-col fu">
+            <div class="flex justify-between items-center">
+              <img class="h-10 w-10" src="./asset/ambulance.png" alt="" />
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div>
+              <h1 class="font-bold text-2xl">Ambulance Service</h1>
+              <h5>Ambulance Service</h5>
+              <p class="font-bold text-xl">1994-999999</p>
+              <button class="bg-gray-200 text-black -my-10">Health</button>
+            </div>
+            <div class="mt-4 flex justify-between items-center">
+              <button
+                id="copy-count"
+                class="copy-btn bg-gray-300 rounded-xl w-25 data-service="Ambulance" data-number="1994" "
+              >
+                Copy
+              </button>
+              <button
+                onclick="makeCall('Ambulance', '1994-999999')"
+                id="btn-one"
+                class="bg-blue-500 rounded-xl w-25 cart-btn"
+              >
+                Call
+              </button>
+            </div>
+          </div>
+          <!-------------Card 05--------------->
+          <div class="bg-pink-50 p-4 rounded-xl flex flex-col fu">
+            <div class="flex justify-between items-center">
+              <img class="h-10 w-10" src="./asset/emergency.png" alt="" />
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div>
+              <h1 class="font-bold text-2xl">Women & Healthcare Service</h1>
+              <h5>Women & Healthcare</h5>
+              <p class="font-bold text-xl">109</p>
+              <button class="bg-gray-200 text-black -my-10">Help</button>
+            </div>
+            <div class="mt-4 flex justify-between items-center">
+              <button
+                id="copy-count"
+                class="copy-btn bg-gray-300 rounded-xl w-25 data-service="Women" data-number="109" "
+              >
+                Copy
+              </button>
+              <button
+                onclick="makeCall('Women & Health', '109')"
+                id="btn-one"
+                class="bg-blue-500 rounded-xl w-25 cart-btn"
+              >
+                Call
+              </button>
+            </div>
+          </div>
+          <!-------------Card 06--------------->
+          <div class="bg-pink-50 p-4 rounded-xl flex flex-col fu">
+            <div class="flex justify-between items-center">
+              <img class="h-10 w-10" src="./asset/emergency.png" alt="" />
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div>
+              <h1 class="font-bold text-2xl">Anti-Corruption Helpline</h1>
+              <h5>National Emergency</h5>
+              <p class="font-bold text-xl">106</p>
+              <button class="bg-gray-200 text-black -my-10">Govt.</button>
+            </div>
+            <div class="mt-4 flex justify-between items-center">
+              <button
+                id="copy-count"
+                class="copy-btn bg-gray-300 rounded-xl w-25 data-service="Anti-Corruption" data-number="109" "
+              >
+                Copy
+              </button>
+              <button
+                onclick="makeCall('Anti-Corruption', '106')"
+                id="btn-one"
+                class="bg-blue-500 rounded-xl w-25 cart-btn"
+              >
+                Call
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side / this is history section -->
+        <div class="lg:col-span-3 bg-white p-4 rounded-xl shadow-lg col-span-1">
+          <div class="">
+            <div class="flex justify-between items-center">
+              <div class="flex justify-between items-center gap-4">
+                <i class="fa-regular fa-clock w-15"></i>
+                <h2 class="font-bold shadow-lg rounded-xl p-5 h-full">
+                  Call History
+                </h2>
+                <ul
+                  id="callHistory"
+                  class="list-disc list-inside space-y-2 text-sm text-gray-700"
+                ></ul>
+              </div>
+              <div>
+                <button
+                  id="clearHistory"
+                  class="rounded-xl mt-3 bg-red-500 text-white w-15"
+                >
+                  Clear
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./assign05.js"></script>
+  </body>
+</html>
